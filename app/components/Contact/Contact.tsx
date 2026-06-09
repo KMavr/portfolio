@@ -1,6 +1,7 @@
 import type { IconType } from 'react-icons';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { EMAIL, SOCIALS } from '@/app/config/contact';
+import { CONTACT_SUBLINE } from '@/app/config/site';
 import { SocialLink } from '@/app/types';
 import { cn } from '@/lib/utils/cn';
 
@@ -13,10 +14,7 @@ function Contact() {
   return (
     <section id="contact" className={styles.section}>
       <h2 className={styles.heading}>Let&apos;s work together</h2>
-      <p className={styles.subline}>
-        Open to new work — remote, with a preference for EU time zones. The fastest way to reach me
-        is email.
-      </p>
+      <p className={styles.subline}>{CONTACT_SUBLINE}</p>
       <a href={`mailto:${EMAIL}`} className={styles.cta}>
         Email me
       </a>

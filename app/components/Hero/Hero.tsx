@@ -1,18 +1,21 @@
+import { HERO_STATUS, YEARS_EXPERIENCE } from '@/app/config/site';
 import { cn } from '@/lib/utils/cn';
 
 function Hero() {
   return (
     <section id="top" className={styles.section}>
-      <p className={styles.status}>
-        <span className={styles.dot} aria-hidden="true" />
-        Open to work · Remote, EU preferred
-      </p>
+      {HERO_STATUS && (
+        <p className={styles.status}>
+          <span className={styles.dot} aria-hidden="true" />
+          {HERO_STATUS}
+        </p>
+      )}
       <h1 className={styles.headline}>
         Front-end engineering for <span className={styles.accent}>production</span> systems.
       </h1>
       <p className={styles.subline}>
-        Senior front-end engineer with 10 years of experience building React and React Native
-        products. Based in Thessaloniki, working remotely across Europe.
+        Senior front-end engineer with {YEARS_EXPERIENCE} years of experience, building React and
+        React Native products. Based in Thessaloniki, working remotely across Europe.
       </p>
     </section>
   );
