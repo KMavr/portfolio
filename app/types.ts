@@ -18,3 +18,8 @@ export type Role = {
   summary: string;
   companyHref?: string;
 };
+
+export type SkillGroup = {
+  label: string;
+  skills: string[];
+};
