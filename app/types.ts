@@ -23,3 +23,8 @@ export type SkillGroup = {
   label: string;
   skills: string[];
 };
+
+export type SocialLink = {
+  label: 'GitHub' | 'LinkedIn';
+  href: string;
+};

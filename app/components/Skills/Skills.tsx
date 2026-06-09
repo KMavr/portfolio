@@ -16,7 +16,7 @@ function Skills() {
 }
 
 const styles = {
-  section: cn('mx-auto w-full max-w-5xl px-6 py-20 sm:py-28'),
+  section: cn('mx-auto w-full max-w-5xl px-6 py-16 sm:py-24'),
   heading: cn('text-ink text-2xl font-semibold sm:text-3xl'),
   groups: cn('mt-10 flex flex-col gap-8'),
 };
