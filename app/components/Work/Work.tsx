@@ -14,6 +14,7 @@ function Work() {
             description={project.description}
             techTags={project.tags}
             links={project.links}
+            slug={project.slug}
           />
         ))}
       </div>

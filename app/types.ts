@@ -8,6 +8,23 @@ export type Project = {
   description: string;
   tags: string[];
   links: ProjectLink[];
+  slug?: string;
+};
+
+export type ProjectDetailBlock =
+  | { type: 'prose'; text: string }
+  | { type: 'code'; code: string }
+  | { type: 'list'; items: string[] };
+
+export type ProjectDetailSection = {
+  heading: string;
+  blocks: ProjectDetailBlock[];
+};
+
+export type ProjectDetail = {
+  slug: string;
+  tagline: string;
+  sections: ProjectDetailSection[];
 };
 
 export type Role = {
