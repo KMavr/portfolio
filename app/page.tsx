@@ -1,3 +1,4 @@
+import Contact from '@/app/components/Contact/Contact';
 import Experience from '@/app/components/Experience/Experience';
 import Hero from '@/app/components/Hero/Hero';
 import Skills from '@/app/components/Skills/Skills';
@@ -10,6 +11,7 @@ function Home() {
       <Experience />
       <Skills />
       <Work />
+      <Contact />
     </main>
   );
 }

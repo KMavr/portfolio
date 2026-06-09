@@ -22,7 +22,7 @@ function Work() {
 }
 
 const styles = {
-  section: cn('mx-auto w-full max-w-5xl px-6 py-20 sm:py-28'),
+  section: cn('mx-auto w-full max-w-5xl px-6 py-16 sm:py-24'),
   heading: cn('text-ink text-2xl font-semibold sm:text-3xl'),
   grid: cn('mt-10 grid gap-4 sm:grid-cols-2'),
 };
