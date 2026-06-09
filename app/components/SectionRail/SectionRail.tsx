@@ -24,11 +24,11 @@ function SectionRail() {
                 href={`#${id}`}
                 aria-current={isActive ? 'true' : undefined}
                 className={styles.link}>
-                <span className={cn(styles.tick, isActive ? styles.tickActive : styles.tickIdle)} />
                 <span
                   className={cn(styles.label, isActive ? styles.labelActive : styles.labelIdle)}>
                   {label}
                 </span>
+                <span className={cn(styles.dot, isActive ? styles.dotActive : styles.dotIdle)} />
               </a>
             </li>
           );
@@ -39,15 +39,18 @@ function SectionRail() {
 }
 
 const styles = {
-  rail: cn('fixed top-1/2 right-8 z-40 hidden -translate-y-1/2 lg:block'),
-  list: cn('flex flex-col gap-4'),
-  link: cn('group inline-flex items-center gap-3'),
-  tick: cn('h-px transition-all duration-300 ease-out'),
-  tickIdle: cn('bg-faint w-4 group-hover:w-6'),
-  tickActive: cn('bg-accent w-8'),
-  label: cn('font-mono text-xs transition-colors'),
-  labelIdle: cn('text-faint group-hover:text-muted'),
-  labelActive: cn('text-accent'),
+  rail: cn('fixed top-1/2 right-6 z-40 hidden -translate-y-1/2 lg:block'),
+  list: cn('flex flex-col items-end gap-4'),
+  link: cn('group flex items-center justify-end gap-2 py-1'),
+  label: cn(
+    'hidden font-mono text-xs transition-all duration-200 ease-out xl:inline',
+    'translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100',
+  ),
+  labelIdle: cn('text-muted'),
+  labelActive: cn('text-accent translate-x-0 opacity-100'),
+  dot: cn('size-2 rounded-full transition-all duration-200 ease-out'),
+  dotIdle: cn('bg-faint group-hover:bg-muted'),
+  dotActive: cn('bg-accent scale-125'),
 };
 
 export default SectionRail;
