@@ -9,3 +9,12 @@ export type Project = {
   tags: string[];
   links: ProjectLink[];
 };
+
+export type Role = {
+  title: string;
+  company: string;
+  dates: string;
+  location: string;
+  summary: string;
+  companyHref?: string;
+};
