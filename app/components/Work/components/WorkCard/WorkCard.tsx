@@ -58,18 +58,19 @@ function WorkCard({ title, description, techTags, links, slug }: WorkCardProps) 
 
 const styles = {
   card: cn(
-    'border-line bg-surface rounded-card flex h-full flex-col border p-6',
+    'border-line bg-surface rounded-card relative flex h-full flex-col border p-6',
     'shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-md',
   ),
   title: cn('text-ink font-display text-lg font-semibold break-words'),
   titleLink: cn(
     'text-ink font-display text-lg font-semibold break-words',
     'hover:text-accent transition-colors',
+    "after:absolute after:inset-0 after:content-['']",
   ),
   description: cn('text-muted mt-2 text-sm leading-relaxed'),
   tags: cn('mt-4 flex flex-wrap gap-x-3 gap-y-1'),
   tag: cn('text-faint font-mono text-xs'),
-  links: cn('mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-5'),
+  links: cn('relative z-10 mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-5'),
   link: cn(
     'text-muted hover:text-accent inline-flex items-center gap-1.5',
     'font-mono text-xs transition-colors',
