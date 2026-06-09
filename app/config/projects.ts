@@ -10,6 +10,7 @@ export const PROJECTS: Project[] = [
       { label: 'npm', href: 'https://www.npmjs.com/package/unmaintained' },
       { label: 'GitHub', href: 'https://github.com/KMavr/unmaintained' },
     ],
+    slug: 'unmaintained',
   },
   {
     title: 'debtctl',
@@ -20,6 +21,7 @@ export const PROJECTS: Project[] = [
       { label: 'npm', href: 'https://www.npmjs.com/package/debtctl' },
       { label: 'GitHub', href: 'https://github.com/KMavr/debtctl' },
     ],
+    slug: 'debtctl',
   },
   {
     title: 'eslint-plugin-tailwind-design-tokens',
@@ -30,6 +32,7 @@ export const PROJECTS: Project[] = [
       { label: 'npm', href: 'https://www.npmjs.com/package/eslint-plugin-tailwind-design-tokens' },
       { label: 'GitHub', href: 'https://github.com/KMavr/eslint-plugin-tailwind-design-tokens' },
     ],
+    slug: 'eslint-plugin-tailwind-design-tokens',
   },
   {
     title: 'redor.blue',
@@ -39,6 +42,7 @@ export const PROJECTS: Project[] = [
       { label: 'Live', href: 'https://redor.blue' },
       { label: 'GitHub', href: 'https://github.com/KMavr/red-blue-button' },
     ],
+    slug: 'redor-blue',
   },
   {
     title: 'GhostDock',
@@ -49,5 +53,6 @@ export const PROJECTS: Project[] = [
       { label: 'Live', href: 'https://ghostdock.vercel.app/' },
       { label: 'GitHub', href: 'https://github.com/KMavr/ghostdock' },
     ],
+    slug: 'ghostdock',
   },
 ];

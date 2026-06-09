@@ -1,15 +1,16 @@
+import Link from 'next/link';
 import { cn } from '@/lib/utils/cn';
 
 function Nav() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <a href="#top" className={styles.nameLink}>
+        <Link href="/#top" className={styles.nameLink}>
           Konstantinos Mavrikas
-        </a>
-        <a href="#contact" className={styles.contactLink}>
+        </Link>
+        <Link href="/#contact" className={styles.contactLink}>
           Get in touch
-        </a>
+        </Link>
       </nav>
     </header>
   );

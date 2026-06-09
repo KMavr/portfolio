@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { IconType } from 'react-icons';
 import { FaGithub, FaGlobe, FaNpm } from 'react-icons/fa';
 import { ProjectLink } from '@/app/types';
@@ -14,12 +15,19 @@ interface WorkCardProps {
   description: string;
   techTags: string[];
   links: ProjectLink[];
+  slug?: string;
 }
 
-function WorkCard({ title, description, techTags, links }: WorkCardProps) {
+function WorkCard({ title, description, techTags, links, slug }: WorkCardProps) {
   return (
     <article className={styles.card}>
-      <h3 className={styles.title}>{title}</h3>
+      {slug ? (
+        <Link href={`/projects/${slug}`} className={styles.titleLink}>
+          {title}
+        </Link>
+      ) : (
+        <h3 className={styles.title}>{title}</h3>
+      )}
       <p className={styles.description}>{description}</p>
       <ul className={styles.tags}>
         {techTags.map((techTag) => (
@@ -54,6 +62,10 @@ const styles = {
     'shadow-sm transition-transform duration-200 ease-out hover:-translate-y-1 hover:shadow-md',
   ),
   title: cn('text-ink font-display text-lg font-semibold break-words'),
+  titleLink: cn(
+    'text-ink font-display text-lg font-semibold break-words',
+    'hover:text-accent transition-colors',
+  ),
   description: cn('text-muted mt-2 text-sm leading-relaxed'),
   tags: cn('mt-4 flex flex-wrap gap-x-3 gap-y-1'),
   tag: cn('text-faint font-mono text-xs'),
