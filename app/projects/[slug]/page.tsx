@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import ProjectDetail from '@/app/components/ProjectDetail/ProjectDetail';
 import { PROJECT_DETAILS } from '@/app/config/projectDetails';
 import { PROJECTS } from '@/app/config/projects';
+import { SITE_NAME } from '@/app/config/site';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -23,8 +24,19 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   }
 
   return {
-    title: `${project.title} - Konstantinos Mavrikas`,
+    title: project.title,
     description: detail.tagline,
+    openGraph: {
+      title: `${project.title} — ${SITE_NAME}`,
+      description: detail.tagline,
+      url: `/projects/${slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} — ${SITE_NAME}`,
+      description: detail.tagline,
+    },
   };
 }
 
