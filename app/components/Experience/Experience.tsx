@@ -8,7 +8,7 @@ function Experience() {
       <div className={styles.header}>
         <h2 className={styles.heading}>Experience</h2>
         <a
-          href="/Konstantinos%20Mavrikas%20-%20CV.pdf"
+          href="/Konstantinos_Mavrikas_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.cvLink}>
