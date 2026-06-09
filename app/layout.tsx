@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import Footer from '@/app/components/Footer/Footer';
 import Nav from '@/app/components/Nav/Nav';
 import { cn } from '@/lib/utils/cn';
 
@@ -38,6 +39,7 @@ function RootLayout({
       <body className={styles.body}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
