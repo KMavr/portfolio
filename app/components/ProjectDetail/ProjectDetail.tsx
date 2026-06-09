@@ -13,7 +13,7 @@ interface ProjectDetailProps {
 function ProjectDetail({ project, detail }: ProjectDetailProps) {
   return (
     <article className={styles.article}>
-      <Link href="/#work" className={styles.back}>
+      <Link href="/#projects" className={styles.back}>
         <FaArrowLeft className={styles.backIcon} aria-hidden="true" />
         All work
       </Link>
