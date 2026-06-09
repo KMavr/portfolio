@@ -9,6 +9,8 @@
     "lint": "eslint",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
+    "deps:unmaintained": "unmaintained --soft",
+    "deps:debt": "debtctl check",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -33,16 +35,19 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "debtctl": "^0.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-tailwind-design-tokens": "^0.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "unmaintained": "^0.2.0"
   }
 }

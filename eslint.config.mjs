@@ -4,6 +4,7 @@ import nextTs from 'eslint-config-next/typescript';
 import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import prettierPlugin from 'eslint-plugin-prettier';
+import tailwindDesignTokens from 'eslint-plugin-tailwind-design-tokens';
 
 export default defineConfig([
   ...nextVitals,
@@ -57,6 +58,25 @@ export default defineConfig([
         },
       ],
       'import/prefer-default-export': 'error',
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    plugins: {
+      'tailwind-design-tokens': tailwindDesignTokens,
+    },
+    rules: {
+      'tailwind-design-tokens/no-default-palette': 'error',
+      'tailwind-design-tokens/no-hardcoded-colors': ['error', { cssFile: './app/globals.css' }],
+    },
+  },
+  {
+    // opengraph-image/icon use literal hex (satori can't read oklch tokens);
+    // projectDetails holds color literals as case-study example content, not UI.
+    files: ['app/opengraph-image.tsx', 'app/icon.tsx', 'app/config/projectDetails.ts'],
+    rules: {
+      'tailwind-design-tokens/no-default-palette': 'off',
+      'tailwind-design-tokens/no-hardcoded-colors': 'off',
     },
   },
   prettierConfig,
