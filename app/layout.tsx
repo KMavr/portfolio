@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import Footer from '@/app/components/Footer/Footer';
 import Nav from '@/app/components/Nav/Nav';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from '@/app/config/site';
 import { cn } from '@/lib/utils/cn';
 
 const geistSans = Geist({
@@ -22,9 +23,25 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Konstantinos Mavrikas — Senior Front-end Developer',
-  description:
-    'Senior front-end developer with 9 years building React and React Native products. Open to work.',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: '/',
+    siteName: SITE_NAME,
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 function RootLayout({
