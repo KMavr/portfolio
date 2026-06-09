@@ -1,5 +1,4 @@
-// TODO: replace with the production domain.
-export const SITE_URL = 'https://example.com';
+export const SITE_URL = 'https://kmavr.dev';
 export const SITE_NAME = 'Konstantinos Mavrikas';
 export const SITE_ROLE = 'Senior Front-end Developer';
 export const SITE_TITLE = `${SITE_NAME} — ${SITE_ROLE}`;
