@@ -34,7 +34,7 @@ function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}>
+      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}>
       <body className={styles.body}>
         <Nav />
         {children}
@@ -44,7 +44,7 @@ function RootLayout({
 }
 
 const styles = {
-  body: cn('flex min-h-full flex-col'),
+  body: cn('flex min-h-dvh flex-col'),
 };
 
 export default RootLayout;
