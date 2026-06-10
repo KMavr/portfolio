@@ -14,7 +14,7 @@ const ICONS: Record<SocialLink['label'], IconType> = {
 function Contact() {
   return (
     <section id="contact" className={styles.section}>
-      <h2 className={styles.heading}>Let&apos;s work together</h2>
+      <h2 className={styles.heading}>Have a product that needs a solid front-end?</h2>
       <p className={styles.subline}>{CONTACT_SUBLINE}</p>
       <EmailWithCopyTooltip email={EMAIL} className={styles.ctaWrapper} linkClassName={styles.cta}>
         Email me
