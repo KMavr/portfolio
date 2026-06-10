@@ -32,7 +32,7 @@ const styles = {
   mailLink: cn('text-accent hover:text-accent-hover transition-colors'),
   divider: cn('border-line mt-8 border-t'),
   credit: cn(
-    'text-faint mt-6 flex flex-col gap-1 font-mono text-xs',
+    'text-muted mt-6 flex flex-col gap-1 font-mono text-xs',
     'sm:flex-row sm:items-center sm:justify-between',
   ),
 };

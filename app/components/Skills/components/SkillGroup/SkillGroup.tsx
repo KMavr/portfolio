@@ -22,7 +22,7 @@ function SkillGroup({ label, skills }: SkillGroupProps) {
 
 const styles = {
   group: cn('flex flex-col gap-3 sm:flex-row sm:gap-8'),
-  label: cn('text-faint font-mono text-xs sm:w-36 sm:shrink-0 sm:pt-1.5'),
+  label: cn('text-muted font-mono text-xs sm:w-36 sm:shrink-0 sm:pt-1.5'),
   chips: cn('flex flex-wrap gap-2'),
   chip: cn('border-line text-muted rounded-full border px-3 py-1 font-mono text-xs'),
 };

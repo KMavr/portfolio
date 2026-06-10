@@ -69,7 +69,7 @@ const styles = {
   ),
   description: cn('text-muted mt-2 text-sm leading-relaxed'),
   tags: cn('mt-4 flex flex-wrap gap-x-3 gap-y-1'),
-  tag: cn('text-faint font-mono text-xs'),
+  tag: cn('text-muted font-mono text-xs'),
   links: cn('relative z-10 mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-5'),
   link: cn(
     'text-muted hover:text-accent inline-flex items-center gap-1.5',

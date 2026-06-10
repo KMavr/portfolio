@@ -53,7 +53,7 @@ const styles = {
   title: cn('text-ink font-display text-3xl font-semibold sm:text-4xl'),
   tagline: cn('text-muted mt-3 text-lg leading-relaxed'),
   tags: cn('mt-5 flex flex-wrap gap-x-3 gap-y-1'),
-  tag: cn('text-faint font-mono text-xs'),
+  tag: cn('text-muted font-mono text-xs'),
   links: cn('mt-5 flex flex-wrap gap-x-4 gap-y-1'),
   sections: cn('mt-10 flex flex-col gap-10'),
 };
