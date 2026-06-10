@@ -71,9 +71,9 @@ export default defineConfig([
     },
   },
   {
-    // opengraph-image/icon use literal hex (satori can't read oklch tokens);
+    // og image renderer/icon use literal hex (satori can't read oklch tokens);
     // projectDetails holds color literals as case-study example content, not UI.
-    files: ['app/opengraph-image.tsx', 'app/icon.tsx', 'app/config/projectDetails.ts'],
+    files: ['lib/og.tsx', 'app/icon.tsx', 'app/config/projectDetails.ts'],
     rules: {
       'tailwind-design-tokens/no-default-palette': 'off',
       'tailwind-design-tokens/no-hardcoded-colors': 'off',
