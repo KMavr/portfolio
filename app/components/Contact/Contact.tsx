@@ -1,5 +1,6 @@
 import type { IconType } from 'react-icons';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import EmailWithCopyTooltip from '@/app/components/EmailWithCopyTooltip/EmailWithCopyTooltip';
 import { EMAIL, SOCIALS } from '@/app/config/contact';
 import { CONTACT_SUBLINE } from '@/app/config/site';
 import { SocialLink } from '@/app/types';
@@ -15,9 +16,9 @@ function Contact() {
     <section id="contact" className={styles.section}>
       <h2 className={styles.heading}>Let&apos;s work together</h2>
       <p className={styles.subline}>{CONTACT_SUBLINE}</p>
-      <a href={`mailto:${EMAIL}`} className={styles.cta}>
+      <EmailWithCopyTooltip email={EMAIL} className={styles.ctaWrapper} linkClassName={styles.cta}>
         Email me
-      </a>
+      </EmailWithCopyTooltip>
       <ul className={styles.socials}>
         {SOCIALS.map((social) => {
           const Icon = ICONS[social.label];
@@ -45,8 +46,9 @@ const styles = {
   ),
   heading: cn('text-ink font-display text-3xl font-semibold sm:text-4xl'),
   subline: cn('text-muted mt-4 text-base leading-relaxed text-balance'),
+  ctaWrapper: cn('mt-8 inline-flex'),
   cta: cn(
-    'bg-accent hover:bg-accent-hover text-paper mt-8 rounded-full',
+    'bg-accent hover:bg-accent-hover text-paper rounded-full',
     'px-6 py-3 text-sm font-medium transition-colors active:translate-y-px',
   ),
   socials: cn('mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2'),
