@@ -46,7 +46,7 @@ const styles = {
   item: cn('flex flex-col gap-2 py-6 sm:flex-row sm:gap-8'),
   meta: cn('flex flex-col gap-0.5 sm:w-36 sm:shrink-0'),
   dates: cn('text-muted font-mono text-xs'),
-  location: cn('text-faint font-mono text-xs'),
+  location: cn('text-muted font-mono text-xs'),
   body: cn('flex flex-col'),
   role: cn('text-ink font-display text-lg font-semibold'),
   company: cn('text-muted mt-0.5 text-sm'),
