@@ -4,6 +4,7 @@ import { EMAIL, SOCIALS } from '@/app/config/contact';
 import { CONTACT_SUBLINE } from '@/app/config/site';
 import { SocialLink } from '@/app/types';
 import { cn } from '@/lib/utils/cn';
+import EmailCta from './components/EmailCta/EmailCta';
 
 const ICONS: Record<SocialLink['label'], IconType> = {
   GitHub: FaGithub,
@@ -15,9 +16,7 @@ function Contact() {
     <section id="contact" className={styles.section}>
       <h2 className={styles.heading}>Let&apos;s work together</h2>
       <p className={styles.subline}>{CONTACT_SUBLINE}</p>
-      <a href={`mailto:${EMAIL}`} className={styles.cta}>
-        Email me
-      </a>
+      <EmailCta email={EMAIL} />
       <ul className={styles.socials}>
         {SOCIALS.map((social) => {
           const Icon = ICONS[social.label];
@@ -45,10 +44,6 @@ const styles = {
   ),
   heading: cn('text-ink font-display text-3xl font-semibold sm:text-4xl'),
   subline: cn('text-muted mt-4 text-base leading-relaxed text-balance'),
-  cta: cn(
-    'bg-accent hover:bg-accent-hover text-paper mt-8 rounded-full',
-    'px-6 py-3 text-sm font-medium transition-colors active:translate-y-px',
-  ),
   socials: cn('mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2'),
   social: cn(
     'text-muted hover:text-accent inline-flex items-center gap-1.5',
