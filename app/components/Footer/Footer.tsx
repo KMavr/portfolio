@@ -26,7 +26,7 @@ function Footer() {
 }
 
 const styles = {
-  footer: cn('mx-auto w-full max-w-5xl px-6 py-12'),
+  footer: cn('mx-auto mb-5 w-full max-w-5xl px-6 py-12 lg:mb-0'),
   closing: cn('text-muted font-display text-lg'),
   mailWrapper: cn('inline-block'),
   mailLink: cn('text-accent hover:text-accent-hover transition-colors'),
