@@ -1,14 +1,8 @@
 'use client';
 
+import { SECTIONS } from '@/app/config/sections';
 import useActiveSectionDetection from '@/app/hooks/useActiveSectionDetection';
 import { cn } from '@/lib/utils/cn';
-
-const SECTIONS = [
-  { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'contact', label: 'Contact' },
-];
 
 function SectionRail() {
   const activeId = useActiveSectionDetection(SECTIONS);
