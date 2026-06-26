@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils/cn';
 function Work() {
   return (
     <section id="projects" className={styles.section}>
-      <h2 className={styles.heading}>Projects</h2>
+      <h2 className={styles.heading}>OSS Projects</h2>
       <div className={styles.grid}>
         {PROJECTS.map((project) => (
           <WorkCard

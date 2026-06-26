@@ -2,16 +2,27 @@ import { Project } from '@/app/types';
 
 export const PROJECTS: Project[] = [
   {
-    title: 'unmaintained',
-    description:
-      'Advisory CI tool that reports which of your dependencies are unmaintained — and which are probably unmaintained.',
-    tags: ['TypeScript', 'CLI', 'Node.js'],
+    title: 'redor.blue',
+    description: 'Global social-dilemma app — live votes, per-country breakdown, 12 languages.',
+    tags: ['React', 'TypeScript', 'Supabase'],
     links: [
-      { label: 'npm', href: 'https://www.npmjs.com/package/unmaintained' },
-      { label: 'GitHub', href: 'https://github.com/KMavr/unmaintained' },
+      { label: 'Live', href: 'https://redor.blue' },
+      { label: 'GitHub', href: 'https://github.com/KMavr/red-blue-button' },
     ],
-    slug: 'unmaintained',
+    slug: 'redor-blue',
   },
+  {
+    title: 'GhostDock',
+    description:
+      'Turn any public GitHub repo into a clean, shareable product landing page in seconds.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+    links: [
+      { label: 'Live', href: 'https://ghostdock.vercel.app/' },
+      { label: 'GitHub', href: 'https://github.com/KMavr/ghostdock' },
+    ],
+    slug: 'ghostdock',
+  },
+
   {
     title: 'debtctl',
     description:
@@ -35,24 +46,25 @@ export const PROJECTS: Project[] = [
     slug: 'eslint-plugin-tailwind-design-tokens',
   },
   {
-    title: 'redor.blue',
-    description: 'Global social-dilemma app — live votes, per-country breakdown, 12 languages.',
-    tags: ['React', 'TypeScript', 'Supabase'],
+    title: 'deeplink-doctor',
+    description:
+      "Statically reconcile an Expo project's route tree, deep-link config, and hosted association files — and report where they disagree.",
+    tags: ['TypeScript', 'CLI', 'Expo'],
     links: [
-      { label: 'Live', href: 'https://redor.blue' },
-      { label: 'GitHub', href: 'https://github.com/KMavr/red-blue-button' },
+      { label: 'npm', href: 'https://www.npmjs.com/package/deeplink-doctor' },
+      { label: 'GitHub', href: 'https://github.com/KMavr/deeplink-doctor' },
     ],
-    slug: 'redor-blue',
+    slug: 'deeplink-doctor',
   },
   {
-    title: 'GhostDock',
+    title: 'unmaintained',
     description:
-      'Turn any public GitHub repo into a clean, shareable product landing page in seconds.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+      'Advisory CI tool that reports which of your dependencies are unmaintained — and which are probably unmaintained.',
+    tags: ['TypeScript', 'CLI', 'Node.js'],
     links: [
-      { label: 'Live', href: 'https://ghostdock.vercel.app/' },
-      { label: 'GitHub', href: 'https://github.com/KMavr/ghostdock' },
+      { label: 'npm', href: 'https://www.npmjs.com/package/unmaintained' },
+      { label: 'GitHub', href: 'https://github.com/KMavr/unmaintained' },
     ],
-    slug: 'ghostdock',
+    slug: 'unmaintained',
   },
 ];
