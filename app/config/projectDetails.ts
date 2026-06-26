@@ -295,4 +295,76 @@ Due for review (1):
       },
     ],
   },
+  'deeplink-doctor': {
+    slug: 'deeplink-doctor',
+    tagline:
+      "Statically reconcile an Expo project's route tree, native deep-link config, and hosted association files — and report where they disagree.",
+    sections: [
+      {
+        heading: 'The problem',
+        blocks: [
+          {
+            type: 'prose',
+            text: 'Deep links break in ways nothing catches until a user taps one in production: an intentFilter advertises a path no screen handles, a screen can never be reached by any link, or the apple-app-site-association file you hosted names the wrong bundle.',
+          },
+          {
+            type: 'prose',
+            text: "Apple's validator and Android's pm verify-app-links check the hosted file or the device state — none of them read your repo, so none can tell you the repo and the config disagree. That repo-aware cross-check is the whole point of this tool. Zero config, no setup, runs over npx.",
+          },
+        ],
+      },
+      {
+        heading: 'How it works',
+        blocks: [
+          {
+            type: 'prose',
+            text: 'It reconciles up to three sources of truth and reports where they drift apart:',
+          },
+          {
+            type: 'list',
+            items: [
+              'Route tree — parses your app/ directory the way expo-router does (dynamic [id], catch-all [...rest], (groups), _layout, +-special and API routes).',
+              'Native config — reads the resolved config from npx expo config --json (scheme, ios.associatedDomains/bundleIdentifier, android.package/intentFilters).',
+              'Hosted association files (opt-in, --remote) — fetches the apple-app-site-association and assetlinks.json for your domain and checks they point back at your app.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Green offline, red against the live world',
+        blocks: [
+          {
+            type: 'prose',
+            text: 'Static checks run offline and are safe on every commit. --remote closes the other half of the handshake — the classic "works in dev, broken in prod" gap — by confirming the hosted files name your app:',
+          },
+          {
+            type: 'code',
+            code: `$ npx deeplink-doctor check --remote
+  DL202  error  AASA appID does not match ios.bundleIdentifier "com.example.app"
+  DL203  error  assetlinks.json has no entry for android.package "com.example.app"
+
+2 issues (2 errors, 0 warnings)`,
+          },
+        ],
+      },
+      {
+        heading: 'Governed suppressions',
+        blocks: [
+          {
+            type: 'prose',
+            text: 'DL002 (a route reachable by no link) is false-positive-prone by design — admin-only or intentionally unlinked screens. Suppressions live in a deeplink.config.json but are governed, not silent: each one needs a reason and an owner, so an ignore is always accountable. A rule missing either raises DL901; a rule targeting an unknown code raises DL902.',
+          },
+        ],
+      },
+      {
+        heading: 'Scope',
+        blocks: [
+          {
+            type: 'prose',
+            text: 'v1 is a focused linter for expo-router projects. Out of scope by design: SHA-256 fingerprint verification against real signing certs (that needs EAS/Play credentials), React Navigation linking.config, and runtime/device testing, which adb and Apple’s validator already own. --json emits a stable schema for CI pipelines, and exit codes are designed to gate pull requests.',
+          },
+        ],
+      },
+    ],
+  },
 };
