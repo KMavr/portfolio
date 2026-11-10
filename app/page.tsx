@@ -5,6 +5,7 @@ import MobileSectionNav from '@/app/components/MobileSectionNav/MobileSectionNav
 import SectionRail from '@/app/components/SectionRail/SectionRail';
 import Skills from '@/app/components/Skills/Skills';
 import Work from '@/app/components/Work/Work';
+import Writing from '@/app/components/Writing/Writing';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Experience />
       <Skills />
       <Work />
+      <Writing />
       <Contact />
     </main>
   );
