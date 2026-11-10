@@ -45,3 +45,11 @@ export type SocialLink = {
   label: 'GitHub' | 'LinkedIn';
   href: string;
 };
+
+export type Article = {
+  title: string;
+  description: string;
+  date: string;
+  tags: string[];
+  href: string;
+};
